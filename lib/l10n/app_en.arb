@@ -1,0 +1,109 @@
+
+{
+    "language": "English",
+    "@language":{
+      "description": "The current Language"
+    },
+
+
+
+      "signInText": "Sign In",
+      "signUpText": "Sign Up",
+      "forgotPasswordText": "Forgot Password",
+      "cameraPermission" : "Camera permission",
+      "galleryPermission" : "Gallery permission",
+      "enableCameraPermission" : "Please enable 'Camera permission' in the app settings to use this feature.",
+      "enableGalleryPermission" : "Please enable 'Gallery permission' in the app settings to use this feature.",
+      "openSettings" : "Open settings",
+      "cameraText": "CAMERA",
+      "galleryText": "GALLERY",
+      "cancel" : "Cancel",
+      "cancelCapitalText": "CANCEL",
+      "nameText" : "Name",
+      "birthOfDate" : "Date of birth",
+      "parentInfo" : "Parent Info",
+      "managementNumber" : "Management number",
+      "kind" : "Kinds",
+      "variety" : "Variety",
+      "gender" : "Gender",
+      "situation" : "Situation",
+      "pkDeficiency" : "PK deficiency",
+      "pkGroup" : "pk Group",
+      "inspectionItems" : "Add inspection items",
+      "register" : "Register",
+      "cat" : "Cat",
+      "dog" : "Dog",
+      "male" : "Male",
+      "female" : "Female",
+      "active" : "Active",
+      "inactive" : "Inactive",
+      "weight" : "Weight (Kg)",
+      "microchipNumber" : "Microchip Number",
+      "myPet" : "About my pet",
+      "childNumber" : "Child number",
+      "date" : "Date",
+      "edit" : "Edit",
+      "editButton" : "Edit",
+      "type" : "Type",
+      "home" : "Home",
+      "growth" : "Growth",
+      "viewGrowth" : "View Growth",
+      "profile" : "Profile",
+      "upload" : "Upload",
+      "save" : "Save",
+      "confirm" : "Confirm",
+      "next" : "Next",
+      "change" : "Change",
+      "petRegistration" : "New Pet Registration",
+      "childRegistration" : "New Child Registration",
+      "petImages" : "Pet Images",
+      "childImages" : "Child Images",
+      "childName" : "Mochi",
+      "clickUpload" : "Click here to upload\nimages from device",
+      "uploadCompleted" : "Upload completed\nPlease proceed to next",
+      "noChildAdded" : "No Child Added",
+      "newBirthRecord" : "New Birth Record",
+      "enterYourName" : "Enter Your Name",
+      "enterPassword" : "Enter Password",
+      "remove" : "Remove",
+      "petApp" : "Pet App",
+      "registeredOrganisms" : "List of registered organisms",
+      "breed" : "Breed: Norwegian",
+      "numberBirths" : "Number of births 2",
+      "biometricSearch" : "Registered biometric search",
+      "search" : "Search",
+      "aboutPet" : "I like broccoli",
+      "signupSuccessfully" : "Signup Successfully",
+      "backToLogin": "Back to login",
+      "verifyEmail": "Verify your email address",
+      "requiredFields" : "Please fill in all required fields",
+      "validEmailAddress" : "Please enter a valid email address",
+      "passwordConfirmPassword" : "Please enter password and confirm password",
+      "atLeastSixCharacters" : "Password should be at least 6 characters long",
+      "passwordsNotMatch" : "Passwords do not match",
+      "confirmPasswordText": "Confirm Password",
+      "emailAddressText": "Email Address",
+      "loginSuccessfully" : "Login Successfully",
+      "enterCompanyId" : "Enter Company ID",
+
+
+
+
+
+
+    "@helloWorld": {
+      "description": "A programmer greeting"
+    },
+    "hello": "Hello {username}",
+    "@hello": {
+      "description": "A welcome message",
+      "placeholders": {
+         "username": {
+           "type": "String"
+         }
+      }
+    },
+  "logo" : "Pet App",
+  "forgetPass" : "Forget password?",
+  "childInfo" : "Child Info"
+}
