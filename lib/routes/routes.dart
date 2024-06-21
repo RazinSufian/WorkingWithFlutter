@@ -3,9 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pet/routes/routes_name.dart';
 
-import '../test/grid_test.dart';
-import '../test/test.dart';
-import '../test/test_2.dart';
+import '../test_page/test.dart';
+import '../test_page/test_2.dart';
+
+
 
 class Routes {
 
@@ -22,9 +23,9 @@ class Routes {
 
       case RoutesName.week1_489:
         return CupertinoPageRoute(builder: (_) => VangtiChai(),);
-
-      case RoutesName.test_page_1:
-        return CupertinoPageRoute(builder: (_) => MenuPage(),);
+      //
+      // case RoutesName.test_page_1:
+      //   return CupertinoPageRoute(builder: (_) => MenuPage(),);
 
 
 
