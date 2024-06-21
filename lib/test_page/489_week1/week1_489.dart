@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet/res/app_color.dart';
-import 'package:pet/utils/components/Vangti_card.dart';
-import '../utils/components/calculator_card.dart';
+import 'package:pet/test_page/489_week1/Vangti_card.dart';
+import 'calculator_card.dart';
 
 void main() {
   runApp(MyApp());
