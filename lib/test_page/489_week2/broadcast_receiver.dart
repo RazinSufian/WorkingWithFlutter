@@ -14,43 +14,43 @@ class _BroadcastReceiverScreenState extends State<BroadcastReceiverScreen> {
       appBar: AppBar(
         title: Text('Broadcast Receiver'),
       ),
-      body: Column(
-        children: <Widget>[
-          DropdownButton<String>(
-            value: selectedBroadcast,
-            onChanged: (String newValue) {
-              setState(() {
-                selectedBroadcast = newValue;
-              });
-            },
-            items: <String>[
-              'Custom broadcast receiver',
-              'System battery notification receiver'
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              if (selectedBroadcast == 'Custom broadcast receiver') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CustomBroadcastReceiverInputScreen()),
-                );
-              } else {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BatteryNotificationReceiverScreen()),
-                );
-              }
-            },
-            child: Text('Next'),
-          ),
-        ],
-      ),
+      // body: Column(
+      //   children: <Widget>[
+      //     DropdownButton<String>(
+      //       value: selectedBroadcast,
+      //       onChanged: (String newValue) {
+      //         setState(() {
+      //           selectedBroadcast = newValue;
+      //         });
+      //       },
+      //       items: <String>[
+      //         'Custom broadcast receiver',
+      //         'System battery notification receiver'
+      //       ].map<DropdownMenuItem<String>>((String value) {
+      //         return DropdownMenuItem<String>(
+      //           value: value,
+      //           child: Text(value),
+      //         );
+      //       }).toList(),
+      //     ),
+      //     ElevatedButton(
+      //       onPressed: () {
+      //         if (selectedBroadcast == 'Custom broadcast receiver') {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => CustomBroadcastReceiverInputScreen()),
+      //           );
+      //         } else {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => BatteryNotificationReceiverScreen()),
+      //           );
+      //         }
+      //       },
+      //       child: Text('Next'),
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
-
 import '../../res/app_color.dart';
-
 
 class RoundInputField extends StatefulWidget {
   final String name;
   final bool? isPassword;
-  TextInputType? type;
-  // TextEditingController textEditingController;
+  final TextInputType? type;
   final bool isReadOnly;
+  final double height;
   final Function(String)? onChanged;
   final Function(String)? onSubmitted;
 
   RoundInputField({
-    super.key,
+    Key? key,
     required this.name,
-    // required this.textEditingController,
     this.isPassword = false,
     this.type,
     this.isReadOnly = false,
     this.onChanged,
     this.onSubmitted,
-  });
+    this.height = 50.0,
+  }) : super(key: key);
 
   @override
   State<RoundInputField> createState() => _RoundInputFieldState();
@@ -33,8 +31,8 @@ class _RoundInputFieldState extends State<RoundInputField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      padding: const EdgeInsets.only(bottom: 8),
+      height: widget.height,
+      padding: EdgeInsets.symmetric(vertical: 2.0), // default padding
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.0),
         color: Colors.white,
@@ -43,37 +41,26 @@ class _RoundInputFieldState extends State<RoundInputField> {
           width: 0.9,
         ),
       ),
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: TextField(
-              readOnly: widget.isReadOnly,
-              style: TextStyle(fontSize: 13),
-              keyboardType: widget.type,
-              // controller: widget.textEditingController,
-              obscureText: widget.isPassword! ? _obscureText : false,
-              onChanged: widget.onChanged,
-              onSubmitted: widget.onSubmitted,
-              decoration: InputDecoration(
-                hintText: widget.name,
-                hintStyle: const TextStyle(color: AppColors.grayColor),
-                border: InputBorder.none,
-                contentPadding: const EdgeInsets.all(10.0),
-              ),
+      child: Padding(
+        padding: EdgeInsets.only(left: 10.0, top: 0.0, right: 5), // Adjusted padding
+        child: TextField(
+          readOnly: widget.isReadOnly,
+          style: TextStyle(fontSize: 13),
+          keyboardType: widget.type,
+          obscureText: widget.isPassword! ? _obscureText : false,
+          onChanged: widget.onChanged,
+          onSubmitted: widget.onSubmitted,
+          maxLines: null, // Allow multiple lines
+          decoration: InputDecoration(
+            hintText: widget.name,
+            hintStyle: TextStyle(
+              color: AppColors.grayColor,
             ),
+            border: InputBorder.none,
+            contentPadding: EdgeInsets.zero, // Ensure no extra padding
           ),
-          if (widget.isPassword!)
-            IconButton(
-              icon: Icon(
-                _obscureText ? Icons.visibility : Icons.visibility_off,
-              ),
-              onPressed: () {
-                setState(() {
-                  _obscureText = !_obscureText;
-                });
-              },
-            ),
-        ],
+          textAlignVertical: TextAlignVertical.top, // Align text to the top
+        ),
       ),
     );
   }

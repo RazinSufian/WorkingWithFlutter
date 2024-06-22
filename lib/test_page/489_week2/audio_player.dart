@@ -30,35 +30,35 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              onPressed: () async {
-                int result = await _audioPlayer.play('https://example.com/audio.mp3');
-                if (result == 1) {
-                  // success
-                }
-              },
-              child: Text('Play'),
-            ),
-            ElevatedButton(
-              onPressed: () async {
-                int result = await _audioPlayer.pause();
-                if (result == 1) {
-                  // success
-                }
-              },
-              child: Text('Pause'),
-            ),
-            ElevatedButton(
-              onPressed: () async {
-                int result = await _audioPlayer.stop();
-                if (result == 1) {
-                  // success
-                }
-              },
-              child: Text('Stop'),
-            ),
-          ],
+          // children: <Widget>[
+          //   ElevatedButton(
+          //     onPressed: () async {
+          //       int result = await _audioPlayer.play('https://example.com/audio.mp3');
+          //       if (result == 1) {
+          //         // success
+          //       }
+          //     },
+          //     child: Text('Play'),
+          //   ),
+          //   ElevatedButton(
+          //     onPressed: () async {
+          //       int result = await _audioPlayer.pause();
+          //       if (result == 1) {
+          //         // success
+          //       }
+          //     },
+          //     child: Text('Pause'),
+          //   ),
+          //   ElevatedButton(
+          //     onPressed: () async {
+          //       int result = await _audioPlayer.stop();
+          //       if (result == 1) {
+          //         // success
+          //       }
+          //     },
+          //     child: Text('Stop'),
+          //   ),
+          // ],
         ),
       ),
     );
