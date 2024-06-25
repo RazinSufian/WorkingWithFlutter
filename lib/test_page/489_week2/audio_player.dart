@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
+
+import '../../res/audio_assests.dart'; // Adjust the import path according to your project structure
+
 class AudioPlayerScreen extends StatefulWidget {
   @override
   _AudioPlayerScreenState createState() => _AudioPlayerScreenState();
@@ -8,6 +11,8 @@ class AudioPlayerScreen extends StatefulWidget {
 
 class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
   late AudioPlayer _audioPlayer;
+  bool isPlaying = false;
+  String currentAudio = '';
 
   @override
   void initState() {
@@ -21,44 +26,49 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
     super.dispose();
   }
 
+  void _playAudio(String audioPath) async {
+    if (isPlaying && currentAudio == audioPath) {
+      await _audioPlayer.pause();
+      setState(() {
+        isPlaying = false;
+      });
+    } else {
+      await _audioPlayer.play(AssetSource(audioPath));
+      setState(() {
+        isPlaying = true;
+        currentAudio = audioPath;
+      });
+    }
+  }
+
+  Widget _buildAudioCard(String audioPath, String title) {
+    return Card(
+      child: ListTile(
+        title: Text(title),
+        trailing: IconButton(
+          icon: Icon(
+            isPlaying && currentAudio == audioPath ? Icons.pause : Icons.play_arrow,
+          ),
+          onPressed: () => _playAudio(audioPath),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Audio Player'),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          // children: <Widget>[
-          //   ElevatedButton(
-          //     onPressed: () async {
-          //       int result = await _audioPlayer.play('https://example.com/audio.mp3');
-          //       if (result == 1) {
-          //         // success
-          //       }
-          //     },
-          //     child: Text('Play'),
-          //   ),
-          //   ElevatedButton(
-          //     onPressed: () async {
-          //       int result = await _audioPlayer.pause();
-          //       if (result == 1) {
-          //         // success
-          //       }
-          //     },
-          //     child: Text('Pause'),
-          //   ),
-          //   ElevatedButton(
-          //     onPressed: () async {
-          //       int result = await _audioPlayer.stop();
-          //       if (result == 1) {
-          //         // success
-          //       }
-          //     },
-          //     child: Text('Stop'),
-          //   ),
-          // ],
+          children: <Widget>[
+            _buildAudioCard(AudioAssets.deepBlue, 'Deep Blue'),
+            _buildAudioCard(AudioAssets.miles500, '500 Miles'),
+            // Add more cards here if you add more audio assets
+          ],
         ),
       ),
     );
