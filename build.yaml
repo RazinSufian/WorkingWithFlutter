@@ -1,0 +1,7 @@
+#targets:
+#  $default:
+#    builders:
+#      audio_assets_generator|audioAssetsBuilder:
+#        enabled: true
+#        generate_for:
+#          - lib/res/audio_assets.dart

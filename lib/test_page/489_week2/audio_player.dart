@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 
-import '../../res/audio_assests.dart'; // Adjust the import path according to your project structure
+import '../../res/audio_assets.dart'; // Adjust the import path according to your project structure
 
 class AudioPlayerScreen extends StatefulWidget {
   @override
