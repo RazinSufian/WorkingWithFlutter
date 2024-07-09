@@ -4,8 +4,8 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import '../../models/GeographicEntiyModel.dart';
-import '../../view_model/GeographicEntityViewMode.dart';
+import 'model/GeographicEntiyModel.dart';
+import 'view_model/GeographicEntityViewMode.dart';
 
 class EntityForm extends StatefulWidget {
   final Entity? entity;

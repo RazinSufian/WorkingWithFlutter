@@ -3,9 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 
-import '../../models/GeographicEntiyModel.dart';
+import 'model/GeographicEntiyModel.dart';
 
-import '../../view_model/GeographicEntityViewMode.dart';
+import 'view_model/GeographicEntityViewMode.dart';
 import 'CreatEditEntityForm.dart';
 
 import 'UpdateEntity.dart';

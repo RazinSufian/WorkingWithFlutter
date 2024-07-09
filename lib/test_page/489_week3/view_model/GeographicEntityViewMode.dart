@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/GeographicEntiyModel.dart';
+import '../model/GeographicEntiyModel.dart';
 import '../repository/GeographicEntityRepository.dart';
 
 class GeographicEntityViewModel with ChangeNotifier {

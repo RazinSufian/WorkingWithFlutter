@@ -1,6 +1,6 @@
-import '../data/network/BaseApiServices.dart';
-import '../data/network/NetworkApiServices.dart';
-import '../models/GeographicEntiyModel.dart';
+import '../../../data/network/BaseApiServices.dart';
+import '../../../data/network/NetworkApiServices.dart';
+import '../model/GeographicEntiyModel.dart';
 
 class GeographicEntityRepository {
   BaseApiServices _apiServices = NetworkApiService();

@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../models/GeographicEntiyModel.dart';
-import '../../view_model/GeographicEntityViewMode.dart';
+import 'model/GeographicEntiyModel.dart';
+import 'view_model/GeographicEntityViewMode.dart';
 
 class UpdateEntityForm extends StatefulWidget {
   @override

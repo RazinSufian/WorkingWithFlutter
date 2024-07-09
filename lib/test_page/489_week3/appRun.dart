@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../view_model/GeographicEntityViewMode.dart';
+import 'view_model/GeographicEntityViewMode.dart';
 import 'mainScreen.dart';
 
 void main() {
